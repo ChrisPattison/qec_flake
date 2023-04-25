@@ -11,9 +11,9 @@
           pkg_overlays = import ./overlays;
           pkg_overlays_ordered = with pkg_overlays; [
             gap
-            python3
+            python
           ];
-          pkgs = nixpkgs.legacyPackages.${system}.extend pkg_overlays.python3;
+          pkgs = nixpkgs.legacyPackages.${system}.extend pkg_overlays.python;
           # pkgs = import nixpkgs { inherit system; overlays = pkg_overlays_ordered; };
         in rec {
           # Basic python interpreter with some python packages

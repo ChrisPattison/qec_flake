@@ -1,4 +1,4 @@
 {
   gap = import ./gap;
-  python3 = import ./python;
+  python = import ./python;
 }
