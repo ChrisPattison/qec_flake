@@ -9,8 +9,6 @@ let
   };
 in
 {
-  python3 = prev.python3.override {
-    packageOverrides = pythonPackageOverlay;
-  };
+  pythonPackagesExtensions = prev.pythonPackagesExtensions ++ [ pythonPackageOverlay ];
 })
 
