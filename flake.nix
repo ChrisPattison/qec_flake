@@ -14,7 +14,6 @@
             python
           ];
           pkgs = nixpkgs.legacyPackages.${system}.extend pkg_overlays.python;
-          # pkgs = import nixpkgs { inherit system; overlays = pkg_overlays_ordered; };
         in rec {
           # Basic python interpreter with some python packages
           packages.py = pkgs.python3.withPackages (ps: [
@@ -22,6 +21,9 @@
             ps.ldpc
             ps.pymatching
             ps.galois
+
+            ps.sympy
+            ps.gmpy
             
             ps.pytest
             ps.pdoc3
